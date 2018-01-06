@@ -242,6 +242,7 @@ public function jungleEncounterChances():Boolean {
 				choices.push(dryadMeeting);
 			}
 		}
+		if(rand(2) == 0) choices.push(yomaJungleMeeting);	//should be 5% chance of meeting him. This is close enough
 		if(!pc.hasStatusEffect("Prai Cooldown") && rand(2) == 0) choices.push(praiFirstEncounter);
 		//Run the event
 		choices[rand(choices.length)]();
