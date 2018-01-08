@@ -12,8 +12,8 @@ public function yomaJungleMeeting():void
 	author("Savin");
 	userInterface.showName("\nYoma");
 	//userInterface.showBust("YOMA");
-	if (flags[MET_YOMA_JUNGLE]) == undefined) {
-		flags[MET_YOMA_JUNGLE] = 1;
+	if (flags["MET_YOMA_JUNGLE"] == undefined) {
+		flags["MET_YOMA_JUNGLE"] = 1;
 		yomaFirstTimeMeeting();
 	} 
 	yomaRepeatMeeting();
@@ -33,14 +33,15 @@ public function yomaFirstTimeMeeting():void
 public function yomaFirstTimeShakeHands():void 
 {
 	output("yomaShakeHands");
-	yomaMainTalkMenu()
+	clearMenu();
+	addButton(0, "next", mainGameMenu);
 }
 
 //[Don't]
 public function yomaFirstTimeDontShakeHands():void 
 {
 	output("yomaDontShakeHands");
-	yomaMainTalkMenu()
+	
 }
 
 
@@ -66,9 +67,9 @@ public function yomaAppearanceOutput():void
 	output("\n\nHe has solid glowing green eyes with only a paler line marking where he’s actually looking. Combined with the grooves running down his cheeks, it’s very apparent that he’s not organic.")
 	output("\nHe’s wearing a red, high-necked but armless cropped shirt that leaves his flat stomach exposed, with matching flared shorts that do nothing to cover his wide hips. The android has no noticeable muscle tone and is remarkably thin waisted.")
 	output("\n\nYou know that his shorts cover a")
-	if (flags[YOMA_JUNGLE_TIMES_SEXED] != undefined) output(" human");
+	if (flags["YOMA_JUNGLE_TIMES_SEXED"] != undefined) output(" human");
 	output(" pussy lying between his legs");
-	if (flags[YOMA_JUNGLE_TIMES_SEXED] != undefined) {
+	if (flags["YOMA_JUNGLE_TIMES_SEXED"] != undefined) {
 		output(" with a heart shaped patch of pubic hair above it  as well as a welcoming asshole.");
 	} else {
 		output(" as well as an asshole.")
